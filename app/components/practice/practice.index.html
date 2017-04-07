@@ -1,4 +1,4 @@
-<h1>{{title}}</h1>
+<h3>{{title}}</h3>
 <p>{{description}}</p>
 
 <div class="container">
@@ -9,16 +9,16 @@
         <span id='test-failed' class="label label-danger"></span>
     </h3>
     <h1>
-        <div class='form-inline'>
-            <form name='equationForm'>
+        <form name='equationForm' class='form-inline'>
+            <div class="container form-group row">
                 <span>{{equation.operand1}}</span>
                 <span>{{equation.operator}}</span>
                 <span>{{equation.operand2}}</span>
                 <span>=</span>
-                <input type="number" class="form-control input-lg" ng-model="equation.answer" required />
+                <input type="number" class="form-control input-lg narrow" ng-model="equation.answer" required />
                 <button class="btn btn-default" ng-click="check()" ng-disabled="equationForm.$invalid">Check</button>
-        </div>
-        <div>{{bla}}</div>
+            </div>
+        </form>
     </h1>
 
     <ul class="list-group">

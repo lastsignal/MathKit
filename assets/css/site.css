@@ -1,4 +1,4 @@
-body {
+/*body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -22,5 +22,12 @@ ul.navbar-nav li a{
 
 .menu-button {
     margin: 15px 0 0 10px;
+}*/
+
+.narrow {
+    width: 110px;
 }
 
+.row {
+    display: flex;
+}
