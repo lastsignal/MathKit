@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+<p>{{description}}</p>
+
+<div class="container">
+
+    <h3 class='pull-right'>
+        <span id='test-total' class="label label-default"></span>
+        <span id='test-passed' class="label label-success"></span>
+        <span id='test-failed' class="label label-danger"></span>
+    </h3>
+    <h1>
+        <div class='form-inline'>
+            <form name='equationForm'>
+                <span>{{equation.operand1}}</span>
+                <span>{{equation.operator}}</span>
+                <span>{{equation.operand2}}</span>
+                <span>=</span>
+                <input type="number" class="form-control input-lg" ng-model="equation.answer" required />
+                <button class="btn btn-default" ng-click="check()" ng-disabled="equationForm.$invalid">Check</button>
+        </div>
+        <div>{{bla}}</div>
+    </h1>
+
+    <ul class="list-group">
+        <li ng-repeat="entry in entries track by $index" ng-class="{'list-group-item': true, 'list-group-item-success': entry.isCorrect, 'list-group-item-danger': !entry.isCorrect, }">
+            {{entry.fullEnteredEquation}} {{entry.isCorrect ? '' : '(Correct answer is: ' + entry.fullCorrectEquation + ')'}}
+        </li>
+    </ul>
+</div>
