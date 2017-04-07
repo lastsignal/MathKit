@@ -1,7 +1,7 @@
 <h3>{{title}}</h3>
 <p>{{description}}</p>
 
-<div class="container">
+<div class="">
 
     <h3 class='pull-right'>
         <span id='test-total' class="label label-default"></span>
@@ -9,18 +9,21 @@
         <span id='test-failed' class="label label-danger"></span>
     </h3>
     <h1>
-        <form name='equationForm' class='form-inline'>
-            <div class="container form-group row">
-                <span>{{equation.operand1}}</span>
-                <span>{{equation.operator}}</span>
-                <span>{{equation.operand2}}</span>
-                <span>=</span>
-                <input type="number" class="form-control input-lg narrow" ng-model="equation.answer" required />
-                <button class="btn btn-default" ng-click="check()" ng-disabled="equationForm.$invalid">Check</button>
+        <form class='container'>
+            <div class="form-group row gutter-1">
+                <span class='col-xs-2 text-center'>{{equation.operand1}}</span>
+                <span class='col-xs-1 text-center'>{{equation.operator}}</span>
+                <span class='col-xs-2 text-center'>{{equation.operand2}}</span>
+                <span class='col-xs-1 text-center'>=</span>
+                <span class='col-xs-4'>
+                <input type="number" class="form-control input-lg text-center" ng-model="equation.answer" required />
+                </span>
+                <span class='col-xs-1'>
+                <button class="btn btn-default" ng-click="check()" ng-disabled="equationForm.$invalid"><span class="glyphicon glyphicon-ok"></span></button>
+                </span>
             </div>
         </form>
     </h1>
-
     <ul class="list-group">
         <li ng-repeat="entry in entries track by $index" ng-class="{'list-group-item': true, 'list-group-item-success': entry.isCorrect, 'list-group-item-danger': !entry.isCorrect, }">
             {{entry.fullEnteredEquation}} {{entry.isCorrect ? '' : '(Correct answer is: ' + entry.fullCorrectEquation + ')'}}

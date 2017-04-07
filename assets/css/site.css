@@ -24,10 +24,21 @@ ul.navbar-nav li a{
     margin: 15px 0 0 10px;
 }*/
 
-.narrow {
+/*.narrow {
     width: 110px;
 }
 
 .row {
     display: flex;
+}*/
+
+
+.gutter-1.row {
+  margin-right: -1px;
+  margin-left: -1px;
+}
+
+.gutter-1 > [class^="col-"], .gutter-0 > [class^=" col-"]{
+  padding-right: 1px;
+  padding-left: 1px;
 }
