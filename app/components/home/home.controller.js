@@ -1,6 +1,6 @@
-﻿theApp.controller('HomeCtrl', function($scope, programService) {
+﻿theApp.controller('HomeCtrl', function($scope, courseService) {
 
-    $scope.programs = programService.getList();
+    $scope.courses = courseService.getList();
 
     $scope.systemDate = Date();
     /*

@@ -1,6 +1,6 @@
-﻿theApp.service('programService', function() {
+﻿theApp.service('courseService', function() {
 
-    let programs = [{
+    let courses = [{
             id: 'add-by-9',
             title: 'Add Simple Numbers to 9',
             description: 'Add numbers 1-10 to 9',
@@ -43,12 +43,12 @@
     ];
 
     return {
-        getById: function(programId) {
-            return programs.find(function(p) { return p.id == programId; });
+        getById: function(courseId) {
+            return courses.find(function(c) { return c.id == courseId; });
         },
 
         getList: function() {
-            return programs;
+            return courses;
         }
     };
 });
