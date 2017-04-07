@@ -1,13 +1,14 @@
 <h3>{{title}}</h3>
 <p>{{description}}</p>
 
-<div class="">
-
+<div class="container">
     <h3 class='pull-right'>
-        <span id='test-total' class="label label-default"></span>
-        <span id='test-passed' class="label label-success"></span>
-        <span id='test-failed' class="label label-danger"></span>
+        <span class="label label-default">{{counters.total}}</span>
+        <span class="label label-success">{{counters.passed}}</span>
+        <span class="label label-danger">{{counters.failed}}</span>
     </h3>
+</div>
+<div>
     <h1>
         <form name="equationForm" class='container' novalidate>
             <div class="form-group row gutter-1">
