@@ -1,18 +1,18 @@
 'use strict';
 
-theApp.controller('PracticeCtrl', function($scope, $routeParams, programService) {
+theApp.controller('PracticeCtrl', function($scope, $routeParams, courseService) {
 
-    let program = programService.getById($routeParams.programId);
-
-    console.log(program);
-
+    let course = courseService.getById($routeParams.courseId);
+    
+    $scope.counters = new Counters();
     $scope.entries = [];
-    $scope.title = program.title;
-    $scope.description = program.description;
-    $scope.equation = new Equation(program.strategies);
+    $scope.title = course.title;
+    $scope.description = course.description;
+    $scope.equation = new Equation(course.strategies);
 
     $scope.check = function() {
         $scope.entries.unshift($scope.equation);
-        $scope.equation = new Equation(program.strategies);
+        $scope.counters.count($scope.equation.isCorrect);
+        $scope.equation = new Equation(course.strategies);
     }
 });

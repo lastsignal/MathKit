@@ -1,26 +1,30 @@
-<h1>{{title}}</h1>
+<h3>{{title}}</h3>
 <p>{{description}}</p>
 
 <div class="container">
-
     <h3 class='pull-right'>
-        <span id='test-total' class="label label-default"></span>
-        <span id='test-passed' class="label label-success"></span>
-        <span id='test-failed' class="label label-danger"></span>
+        <span class="label label-default">{{counters.total}}</span>
+        <span class="label label-success">{{counters.passed}}</span>
+        <span class="label label-danger">{{counters.failed}}</span>
     </h3>
+</div>
+<div>
     <h1>
-        <div class='form-inline'>
-            <form name='equationForm'>
-                <span>{{equation.operand1}}</span>
-                <span>{{equation.operator}}</span>
-                <span>{{equation.operand2}}</span>
-                <span>=</span>
-                <input type="number" class="form-control input-lg" ng-model="equation.answer" required />
-                <button class="btn btn-default" ng-click="check()" ng-disabled="equationForm.$invalid">Check</button>
-        </div>
-        <div>{{bla}}</div>
+        <form name="equationForm" class='container' novalidate>
+            <div class="form-group row gutter-1">
+                <span class='col-xs-2 text-center'>{{equation.operand1}}</span>
+                <span class='col-xs-1 text-center'>{{equation.operator}}</span>
+                <span class='col-xs-2 text-center'>{{equation.operand2}}</span>
+                <span class='col-xs-1 text-center'>=</span>
+                <span class='col-xs-4'>
+                <input type="number" class="form-control input-lg text-center" ng-model="equation.answer" required />
+                </span>
+                <span class='col-xs-1'>
+                <button type="submit" class="btn btn-default" ng-click="check()" ng-disabled="equationForm.$invalid"><span class="glyphicon glyphicon-ok"></span></button>
+                </span>
+            </div>
+        </form>
     </h1>
-
     <ul class="list-group">
         <li ng-repeat="entry in entries track by $index" ng-class="{'list-group-item': true, 'list-group-item-success': entry.isCorrect, 'list-group-item-danger': !entry.isCorrect, }">
             {{entry.fullEnteredEquation}} {{entry.isCorrect ? '' : '(Correct answer is: ' + entry.fullCorrectEquation + ')'}}

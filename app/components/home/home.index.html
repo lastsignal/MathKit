@@ -1,10 +1,12 @@
 <div class="jumbotron">
-    <h1>this is the Shared component</h1>
+    <h1>Last Signal - MathKit</h1>
     <p class="lead">
-        Some contents
+        There are simple courses in this site for the students to practive math. 
     </p>
 </div>
 
+<h2>Courses</h2>
+
 <ul>
-    <li ng-repeat="program in programs"><a href='#/practice/{{program.id}}'>{{program.title}}</a></li>
+    <li ng-repeat="course in courses"><a href='#/practice/{{course.id}}'>{{course.title}}</a></li>
 </ul>

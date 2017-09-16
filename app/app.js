@@ -11,7 +11,7 @@ theApp.config([
             templateUrl: 'app/components/home/home.index.html',
             controller: 'HomeCtrl'
         }).
-        when('/practice/:programId', {
+        when('/practice/:courseId', {
             templateUrl: 'app/components/practice/practice.index.html',
             controller: 'PracticeCtrl'
         }).
