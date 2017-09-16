@@ -40,6 +40,16 @@
                 createOperatorStrategy: function() { return '-'; }
             }
         },
+        {
+            id: 'add-one-digit-twins',
+            title: 'Add one-digit twins',
+            description: 'Add one-digit number to itself',
+            strategies: {
+                createOperand1Strategy: function() { this.operand = Math.floor(Math.random() * 10); return this.operand; },
+                createOperand2Strategy: function() { return this.operand; },
+                createOperatorStrategy: function() { return '+'; }
+            }
+        },
     ];
 
     return {
