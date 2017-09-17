@@ -50,6 +50,16 @@
                 createOperatorStrategy: function() { return '+'; }
             }
         },
+        {
+            id: 'subtract-teen-by-9',
+            title: 'Subtract Teen Numbers by 9',
+            description: 'Subtract numbers 10-20 to 9',
+            strategies: {
+                createOperand1Strategy: function() { return Math.floor(Math.random() * 10) + 10; },
+                createOperand2Strategy: function() { return 9; },
+                createOperatorStrategy: function() { return '-'; }
+            }
+        },
     ];
 
     return {
