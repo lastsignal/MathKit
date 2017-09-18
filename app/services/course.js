@@ -60,6 +60,16 @@
                 createOperatorStrategy: function() { return '-'; }
             }
         },
+        {
+            id: 'ten-subtract-by-1d',
+            title: '10 Subtract 1 digit number',
+            description: 'Subtract single digit numbers from 10',
+            strategies: {
+                createOperand1Strategy: function() { return 10; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '-'; }
+            }
+        },
     ];
 
     return {
