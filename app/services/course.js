@@ -70,6 +70,16 @@
                 createOperatorStrategy: function() { return '-'; }
             }
         },
+        {
+            id: 'multiplication-by-9',
+            title: '1 digit multiplication by 9',
+            description: 'Multiply one digit numbers by nine',
+            strategies: {
+                createOperand1Strategy: function() { return 9; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '*'; }
+            }
+        },
     ];
 
     return {

@@ -43,6 +43,9 @@ class Equation {
 
             case "-":
                 return this.operand1 - this.operand2;
+
+            case "*":
+                return this.operand1 * this.operand2;
         }
     }
 
