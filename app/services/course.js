@@ -71,6 +71,86 @@
             }
         },
         {
+            id: 'multiplication-by-1',
+            title: '1 digit multiplication by 1',
+            description: 'Multiply one digit numbers by one',
+            strategies: {
+                createOperand1Strategy: function() { return 1; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '*'; }
+            }
+        },
+        {
+            id: 'multiplication-by-2',
+            title: '1 digit multiplication by 2',
+            description: 'Multiply one digit numbers by two',
+            strategies: {
+                createOperand1Strategy: function() { return 2; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '*'; }
+            }
+        },
+        {
+            id: 'multiplication-by-3',
+            title: '1 digit multiplication by 3',
+            description: 'Multiply one digit numbers by three',
+            strategies: {
+                createOperand1Strategy: function() { return 3; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '*'; }
+            }
+        },
+        {
+            id: 'multiplication-by-4',
+            title: '1 digit multiplication by 4',
+            description: 'Multiply one digit numbers by four',
+            strategies: {
+                createOperand1Strategy: function() { return 4; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '*'; }
+            }
+        },
+        {
+            id: 'multiplication-by-5',
+            title: '1 digit multiplication by 5',
+            description: 'Multiply one digit numbers by five',
+            strategies: {
+                createOperand1Strategy: function() { return 5; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '*'; }
+            }
+        },
+        {
+            id: 'multiplication-by-6',
+            title: '1 digit multiplication by 6',
+            description: 'Multiply one digit numbers by six',
+            strategies: {
+                createOperand1Strategy: function() { return 6; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '*'; }
+            }
+        },
+        {
+            id: 'multiplication-by-7',
+            title: '1 digit multiplication by 7',
+            description: 'Multiply one digit numbers by seven',
+            strategies: {
+                createOperand1Strategy: function() { return 7; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '*'; }
+            }
+        },
+        {
+            id: 'multiplication-by-8',
+            title: '1 digit multiplication by 8',
+            description: 'Multiply one digit numbers by eight',
+            strategies: {
+                createOperand1Strategy: function() { return 8; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '*'; }
+            }
+        },
+        {
             id: 'multiplication-by-9',
             title: '1 digit multiplication by 9',
             description: 'Multiply one digit numbers by nine',
