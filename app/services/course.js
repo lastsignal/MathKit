@@ -160,6 +160,116 @@
                 createOperatorStrategy: function() { return '*'; }
             }
         },
+        {
+            id: 'division-by-2',
+            title: 'simple division by 2',
+            description: 'Divide multipies of 2 by 2',
+            strategies: {
+                createOperand1Strategy: function() { return Math.round(Math.random() * 12 ) * 2; },
+                createOperand2Strategy: function() { return 2; },
+                createOperatorStrategy: function() { return '/'; }
+            }
+        },
+        {
+            id: 'division-by-3',
+            title: 'simple division by 3',
+            description: 'Divide multipies of 3 by 3 ',
+            strategies: {
+                createOperand1Strategy: function() { return Math.round(Math.random() * 12 ) * 3; },
+                createOperand2Strategy: function() { return 3; },
+                createOperatorStrategy: function() { return '/'; }
+            }
+        },
+        {
+            id: 'division-by-4',
+            title: 'simple division by 4',
+            description: 'Divide multipies of 4 by 4 ',
+            strategies: {
+                createOperand1Strategy: function() { return Math.round(Math.random() * 12 ) * 4; },
+                createOperand2Strategy: function() { return 4; },
+                createOperatorStrategy: function() { return '/'; }
+            }
+        },
+        {
+            id: 'division-by-5',
+            title: 'simple division by 5',
+            description: 'Divide multipies of 5 by 5',
+            strategies: {
+                createOperand1Strategy: function() { return Math.round(Math.random() * 12 ) * 5; },
+                createOperand2Strategy: function() { return 5; },
+                createOperatorStrategy: function() { return '/'; }
+            }
+        },
+        {
+            id: 'division-by-6',
+            title: 'simple division by 6',
+            description: 'Divide multipies of 6 by 6',
+            strategies: {
+                createOperand1Strategy: function() { return Math.round(Math.random() * 12 ) * 6; },
+                createOperand2Strategy: function() { return 6; },
+                createOperatorStrategy: function() { return '/'; }
+            }
+        },
+        {
+            id: 'division-by-7',
+            title: 'simple division by 7',
+            description: 'Divide multipies of 7 by 7',
+            strategies: {
+                createOperand1Strategy: function() { return Math.round(Math.random() * 12 ) * 7; },
+                createOperand2Strategy: function() { return 7; },
+                createOperatorStrategy: function() { return '/'; }
+            }
+        },
+        {
+            id: 'division-by-8',
+            title: 'simple division by 8',
+            description: 'Divide multipies of 8 by 8',
+            strategies: {
+                createOperand1Strategy: function() { return Math.round(Math.random() * 12 ) * 8; },
+                createOperand2Strategy: function() { return 8; },
+                createOperatorStrategy: function() { return '/'; }
+            }
+        },
+        {
+            id: 'division-by-9',
+            title: 'simple division by 9',
+            description: 'Divide multipies of 9 by 9',
+            strategies: {
+                createOperand1Strategy: function() { return Math.round(Math.random() * 12 ) * 9; },
+                createOperand2Strategy: function() { return 9; },
+                createOperatorStrategy: function() { return '/'; }
+            }
+        },
+        {
+            id: 'division-by-10',
+            title: 'simple division by 10',
+            description: 'Divide multipies of 10 by 10',
+            strategies: {
+                createOperand1Strategy: function() { return Math.round(Math.random() * 12 ) * 10; },
+                createOperand2Strategy: function() { return 10; },
+                createOperatorStrategy: function() { return '/'; }
+            }
+        },
+        {
+            id: 'division-by-11',
+            title: 'simple division by 11',
+            description: 'Divide multipies of 11 by 11',
+            strategies: {
+                createOperand1Strategy: function() { return Math.round(Math.random() * 12 ) * 11; },
+                createOperand2Strategy: function() { return 11; },
+                createOperatorStrategy: function() { return '/'; }
+            }
+        },
+        {
+            id: 'division-by-12',
+            title: 'simple division by 12',
+            description: 'Divide multipies of 12 by 12',
+            strategies: {
+                createOperand1Strategy: function() { return Math.round(Math.random() * 12 ) * 12; },
+                createOperand2Strategy: function() { return 12; },
+                createOperatorStrategy: function() { return '/'; }
+            }
+        },
     ];
 
     return {
