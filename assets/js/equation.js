@@ -22,6 +22,11 @@ class Equation {
             // swap operands
             this.operand1 = [this.operand2, this.operand2 = this.operand1][0];
         }
+
+        if (this.operator == "/" && this.operand1 < this.operand2 && this.operand1 != 0) {
+            // swap operands
+            this.operand1 = [this.operand2, this.operand2 = this.operand1][0];
+        }
     }
 
     randomGenerator() {

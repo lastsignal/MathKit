@@ -270,6 +270,23 @@
                 createOperatorStrategy: function() { return '/'; }
             }
         },
+        {
+            id: 'division-random',
+            title: 'simple division - random',
+            description: 'Divide random numbers by their divisors',
+            strategies: {
+                createOperand1Strategy: function() { 
+                    this.operand = Math.round(Math.random() * 12);
+                    return Math.round(Math.random() * 12 ) * this.operand; 
+                },
+                createOperand2Strategy: function() { 
+                    if(this.operand == 0)
+                        return Math.round(Math.random() * 11) + 1;
+                    return this.operand; 
+                },
+                createOperatorStrategy: function() { return '/'; }
+            }
+        },
     ];
 
     return {
