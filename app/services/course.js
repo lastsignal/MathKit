@@ -161,6 +161,46 @@
             }
         },
         {
+            id: 'multiplication-by-10',
+            title: '1 digit multiplication by 10',
+            description: 'Multiply one digit numbers by ten',
+            strategies: {
+                createOperand1Strategy: function() { return 10; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '*'; }
+            }
+        },
+        {
+            id: 'multiplication-by-11',
+            title: '1 digit multiplication by 11',
+            description: 'Multiply one digit numbers by eleven',
+            strategies: {
+                createOperand1Strategy: function() { return 11; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '*'; }
+            }
+        },
+        {
+            id: 'multiplication-by-12',
+            title: '1 digit multiplication by 12',
+            description: 'Multiply one digit numbers by twelve',
+            strategies: {
+                createOperand1Strategy: function() { return 12; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '*'; }
+            }
+        },
+        {
+            id: 'multiplication-random',
+            title: '0-12 by 0-12 random multiplication',
+            description: 'Multiply zero to twelve numbers by zero to twelve',
+            strategies: {
+                createOperand1Strategy: function() { return Math.floor(Math.random() * 12);; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 12); },
+                createOperatorStrategy: function() { return '*'; }
+            }
+        },
+        {
             id: 'division-by-2',
             title: 'simple division by 2',
             description: 'Divide multipies of 2 by 2',
@@ -285,6 +325,16 @@
                     return this.operand; 
                 },
                 createOperatorStrategy: function() { return '/'; }
+            }
+        },
+        {
+            id: 'one-digit-multiplication-by-two-digit',
+            title: 'one digit by 0-99 numbers',
+            description: 'Multiply one digit numbers by two digit numbers',
+            strategies: {
+                createOperand1Strategy: function() { return Math.floor(Math.random() * 99);; },
+                createOperand2Strategy: function() { return Math.floor(Math.random() * 10); },
+                createOperatorStrategy: function() { return '*'; }
             }
         },
     ];
