@@ -1,12 +1,26 @@
 <div class="jumbotron">
     <h1>Last Signal - MathKit</h1>
     <p class="lead">
-        There are simple courses in this site for the students to practive math. 
+        There are simple courses in this site for the students to practive math.
     </p>
 </div>
 
 <h2>Courses</h2>
 
-<ul>
-    <li ng-repeat="course in courses"><a href='#/practice/{{course.id}}'>{{course.title}}</a></li>
-</ul>
+<div class="row">
+    <div ng-repeat="group in ['Addition','Subtraction', 'Multiplication', 'Division', 'Random']">
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{group}}
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li ng-repeat="course in courses | courseContains:group"><a
+                                href='#/practice/{{course.id}}'>{{course.title}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
