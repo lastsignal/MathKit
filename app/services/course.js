@@ -235,7 +235,7 @@
         id: 'division-by-2',
         title: 'simple division by 2',
         tags: ["Division"],
-        description: 'Divide multipies of 2 by 2',
+        description: 'Divide multiplies of 2 by 2',
         strategies: {
             createOperand1Strategy: function () { return Math.round(Math.random() * 13) * 2; },
             createOperand2Strategy: function () { return 2; },
@@ -245,7 +245,7 @@
     {
         id: 'division-by-3',
         title: 'simple division by 3',
-        description: 'Divide multipies of 3 by 3 ',
+        description: 'Divide multiplies of 3 by 3 ',
         tags: ["Division"],
         strategies: {
             createOperand1Strategy: function () { return Math.round(Math.random() * 13) * 3; },
@@ -256,7 +256,7 @@
     {
         id: 'division-by-4',
         title: 'simple division by 4',
-        description: 'Divide multipies of 4 by 4 ',
+        description: 'Divide multiplies of 4 by 4 ',
         tags: ["Division"],
         strategies: {
             createOperand1Strategy: function () { return Math.round(Math.random() * 13) * 4; },
@@ -267,7 +267,7 @@
     {
         id: 'division-by-5',
         title: 'simple division by 5',
-        description: 'Divide multipies of 5 by 5',
+        description: 'Divide multiplies of 5 by 5',
         tags: ["Division"],
         strategies: {
             createOperand1Strategy: function () { return Math.round(Math.random() * 13) * 5; },
@@ -278,7 +278,7 @@
     {
         id: 'division-by-6',
         title: 'simple division by 6',
-        description: 'Divide multipies of 6 by 6',
+        description: 'Divide multiplies of 6 by 6',
         tags: ["Division"],
         strategies: {
             createOperand1Strategy: function () { return Math.round(Math.random() * 13) * 6; },
@@ -289,7 +289,7 @@
     {
         id: 'division-by-7',
         title: 'simple division by 7',
-        description: 'Divide multipies of 7 by 7',
+        description: 'Divide multiplies of 7 by 7',
         tags: ["Division"],
         strategies: {
             createOperand1Strategy: function () { return Math.round(Math.random() * 13) * 7; },
@@ -300,7 +300,7 @@
     {
         id: 'division-by-8',
         title: 'simple division by 8',
-        description: 'Divide multipies of 8 by 8',
+        description: 'Divide multiplies of 8 by 8',
         tags: ["Division"],
         strategies: {
             createOperand1Strategy: function () { return Math.round(Math.random() * 13) * 8; },
@@ -311,7 +311,7 @@
     {
         id: 'division-by-9',
         title: 'simple division by 9',
-        description: 'Divide multipies of 9 by 9',
+        description: 'Divide multiplies of 9 by 9',
         tags: ["Division"],
         strategies: {
             createOperand1Strategy: function () { return Math.round(Math.random() * 13) * 9; },
@@ -322,7 +322,7 @@
     {
         id: 'division-by-10',
         title: 'simple division by 10',
-        description: 'Divide multipies of 10 by 10',
+        description: 'Divide multiplies of 10 by 10',
         tags: ["Division"],
         strategies: {
             createOperand1Strategy: function () { return Math.round(Math.random() * 13) * 10; },
@@ -333,7 +333,7 @@
     {
         id: 'division-by-11',
         title: 'simple division by 11',
-        description: 'Divide multipies of 11 by 11',
+        description: 'Divide multiplies of 11 by 11',
         tags: ["Division"],
         strategies: {
             createOperand1Strategy: function () { return Math.round(Math.random() * 13) * 11; },
@@ -344,7 +344,7 @@
     {
         id: 'division-by-12',
         title: 'simple division by 12',
-        description: 'Divide multipies of 12 by 12',
+        description: 'Divide multiplies of 12 by 12',
         tags: ["Division"],
         strategies: {
             createOperand1Strategy: function () { return Math.round(Math.random() * 13) * 12; },
@@ -383,8 +383,19 @@
     },
     {
         id: 'random-operation-twins',
-        title: 'random operaion of the same number',
-        description: 'Random operation of a number between 0 and 12 by itself',
+        title: 'random operaion on the same number',
+        description: 'Random operation on a number between 0 and 12 by itself',
+        tags: ['Random'],
+        strategies: {
+            createOperand1Strategy: function () { this.operand = Math.floor(Math.random() * 13); return this.operand; },
+            createOperand2Strategy: function () { return this.operand; },
+            createOperatorStrategy: function () { return ['+', '-', '*', '/'][Math.floor(Math.random() * 4)]; }
+        }
+    },
+    {
+        id: 'random-operation-random-number',
+        title: 'random operaion on random number',
+        description: 'Random operation (except division) on two numbers between 0 and 12',
         tags: ['Random'],
         strategies: {
             createOperand1Strategy: function () { this.operand = Math.floor(Math.random() * 13); return this.operand; },
